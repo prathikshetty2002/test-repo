@@ -5,13 +5,14 @@ import { getDatabase, ref, push } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZllIWSTAKdBfPibs1IK0HGElrvlQOXOQ",
-  authDomain: "test-app-8b023.firebaseapp.com",
-  projectId: "test-app-8b023",
-  storageBucket: "test-app-8b023.appspot.com",
-  messagingSenderId: "101103429369",
-  appId: "1:101103429369:web:8f735a676ce7d86e1d2428",
-  measurementId: "G-7J8B29PQ1G"
+  apiKey: "AIzaSyDJMLAiptZI73UBpTo3LRwYCPF2wIziJN0",
+  authDomain: "test-app-7cf65.firebaseapp.com",
+  databaseURL: "https://test-app-7cf65-default-rtdb.firebaseio.com",
+  projectId: "test-app-7cf65",
+  storageBucket: "test-app-7cf65.appspot.com",
+  messagingSenderId: "1077209016218",
+  appId: "1:1077209016218:web:96e5a52d2f0ed0bc27fc23",
+  measurementId: "G-7LE7XFEZC6"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
