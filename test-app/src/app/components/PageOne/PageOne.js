@@ -33,7 +33,7 @@ const PageOne = ({ onButtonClick }) => {
     >
       <form name="form1" className="measure" onSubmit={handleSubmit}>
         <h2>Welcome! First things first...</h2>
-        <p style={{ color: "#C0C0C0" }}>You can always change them later.</p>
+        <p style={{ color: "#C0C0C0" }}>Lets begin.</p>
         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
           <div className="mt3">
             <label
@@ -49,7 +49,7 @@ const PageOne = ({ onButtonClick }) => {
               name="fullName"
               id="full-name"
               size="30"
-              placeholder="Rahul"
+              placeholder="Prathik"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",
@@ -71,7 +71,7 @@ const PageOne = ({ onButtonClick }) => {
               type="text"
               name="displayName"
               id="display-name"
-              placeholder="rahulsinghhh2312@gmail.com"
+              placeholder="prathikkshetty15@gmail.com"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",

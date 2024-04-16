@@ -35,7 +35,7 @@ const PageThree = ({ onButtonClick }) => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "sqsumuys"); // Replace with your Cloudinary upload preset
+      formData.append("upload_preset", "lodrnpjl"); // Replace with your Cloudinary upload preset
   
       const response = await fetch(
         "https://api.cloudinary.com/v1_1/dmdhep1qp/image/upload",

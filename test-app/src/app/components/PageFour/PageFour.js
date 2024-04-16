@@ -1,20 +1,21 @@
 import React from "react";
-import tick from "./tick.jpg";
+
 
 const PageFour = () => {
     return (
       <div
-        className="mw5 bg-white w-100 md:pa2-ns text-black mt5 dib"
+        className="mw5  w-100 md:pa2-ns text-black mt5 dib"
         style={{ maxWidth: "30%", maxHeight:'30%' }}
       >
         <img
-          src={tick}
-          className="h3 w3"
+         style={{mixBlendBode: "multiply"}}
+         src="/tick.jpg"
+          className="h3 w3 mx-auto "
           title="success icon"
           alt="tick-icon"
         />
         <div className="center"><h3 className="">Congratulations, </h3></div>
-        <p className="text-black">
+        <p className="text-white">
           You have completed the onboarding, you can start using our app
         </p>
         <input

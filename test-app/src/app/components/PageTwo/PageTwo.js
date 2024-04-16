@@ -74,7 +74,7 @@ const PageTwo = ({ onButtonClick }) => {
               name="workspaceName"
               id="workspace-name"
               size="30"
-              placeholder="Eden"
+              placeholder="jane street 120"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",
