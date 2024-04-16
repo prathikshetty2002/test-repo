@@ -1,20 +1,43 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./PageOne.css";
 
-const PageOne = ({ onButtonClick}) => {
+const PageOne = ({ onButtonClick }) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    displayName: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Convert form data to JSON
+    const jsonData = JSON.stringify(formData);
+    // Store JSON data in local storage
+    localStorage.setItem("formData", jsonData);
+    // Trigger button click handler to navigate to next page
+    onButtonClick("pagetwo");
+  };
 
   return (
     <main
       className="pt5 black-80 center"
       style={{ maxWidth: "40%", maxHeight: "30%", margin: "auto" }}
     >
-      <form className="measure">
+      <form name="form1" className="measure" onSubmit={handleSubmit}>
         <h2>Welcome! First things first...</h2>
         <p style={{ color: "#C0C0C0" }}>You can always change them later.</p>
         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
           <div className="mt3">
             <label
-              className="db lh-copy text-white f6 mb1"
+              className="db text-white lh-copy f6 mb1"
               htmlFor="full-name"
               style={{ textAlign: "left" }}
             >
@@ -23,36 +46,38 @@ const PageOne = ({ onButtonClick}) => {
             <input
               className="f6 br2 ph3 pv2 mb2 dib black w-100"
               type="text"
-              name="full-name"
+              name="fullName"
               id="full-name"
               size="30"
-              placeholder="Steve Jobs"
+              placeholder="Rahul"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",
                 borderColor: "#EAEEF5",
               }}
+              onChange={handleInputChange}
             />
           </div>
           <div className="mv3">
             <label
-              className="db lh-copy f6 mb1 text-white"
+              className="db text-white lh-copy f6 mb1"
               htmlFor="display-name"
               style={{ textAlign: "left" }}
             >
-              Address
+              Email Address
             </label>
             <input
               className="f6 br2 ph3 pv2 mb2 dib black w-100"
               type="text"
-              name="display-name"
+              name="displayName"
               id="display-name"
-              placeholder="xyz jane street"
+              placeholder="rahulsinghhh2312@gmail.com"
               style={{
                 borderStyle: "solid",
                 borderWidth: "1px",
                 borderColor: "#EAEEF5",
               }}
+              onChange={handleInputChange}
             />
           </div>
         </fieldset>
@@ -65,8 +90,7 @@ const PageOne = ({ onButtonClick}) => {
               backgroundColor: "#664DE5",
             }}
             type="submit"
-            value="Create Workspace"
-            onClick={() => onButtonClick("pagetwo")}
+            value="Create Account"
           />
         </div>
       </form>
